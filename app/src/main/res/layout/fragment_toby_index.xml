@@ -1,0 +1,90 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.bekoman.toby_main.toby_index">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="07:00-08:30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hora_txt"
+                android:layout_weight="1"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textAlignment="viewStart"
+                android:textColor="@color/primary_dark"
+                android:textSize="14sp" />
+
+            <Button
+                android:text="DIA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dia_txt"
+                android:layout_weight="1"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textAlignment="textEnd"
+                android:textColor="@color/primary_dark"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/logo_toby_letters_blue"
+                android:id="@+id/imageView3"
+                android:adjustViewBounds="true"
+                android:elevation="7dp" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar"
+                android:scrollbarSize="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:thumbTint="@color/primary_dark"
+                android:padding="13dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:ems="10"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/Buscar_campo"
+                android:background="@drawable/rounded_corners"
+                tools:fontFamily="sans-serif"
+                android:hint="Ingrese una palabra"
+                android:textColorHint="#8e8e93"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:inputType="textCapWords"
+                android:textAlignment="center"
+                android:elevation="4dp"
+                android:layout_gravity="center_vertical">
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

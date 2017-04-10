@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bekoman.toby_main">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/no_barra">
+
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".toby_main"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:theme="@style/no_barra">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".mostrar_cardview" ></activity>
+        <activity android:name=".datos_detallados" ></activity>
+
+        <uses-library android:name="com.sec.android.app.multiwindow" android:required="false" />
+        <meta-data android:name="com.samsung.android.sdk.multiwindow.penwindow.enable" android:value="true" />
+        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true" />
+
+
+    </application>
+
+
+
+</manifest>

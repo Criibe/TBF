@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bekoman.toby_main.horario">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:alpha="80"
+            android:background="@color/primary_dark">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dia_horario"
+                android:textAlignment="viewStart"
+                android:textStyle="normal|bold"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="22sp"
+                android:layout_marginTop="6dp"
+                android:layout_weight="2"
+                android:text="MIÉRCOLES"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="4dp"
+                android:elevation="5dp" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekbar_horario"
+                android:layout_weight="1.3"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/cardview_light_background" />
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/m56"
+            android:id="@+id/reciclador_horario"
+            android:padding="15dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

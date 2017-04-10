@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/materia_add">
+
+    <TextView
+        android:text="AÑADIR TAREA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        android:textColor="@color/cardview_light_background"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:textStyle="normal|bold"
+        android:background="@color/primary_dark" />
+
+    <TextView
+        android:text="Programación Orientada a Objetos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/materia_txtv"
+        android:textAlignment="viewStart"
+        android:textSize="17sp"
+        android:paddingTop="7dp"
+        android:textColor="@color/cardview_light_background"
+        android:background="@android:color/holo_green_dark"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapCharacters|textCapWords|textCapSentences|textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:hint="NOMBRE DE TAREA"
+        android:textStyle="normal|bold"
+        android:textSize="30sp"
+        android:textColor="@color/secondary_text"
+        android:textAllCaps="false" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine|textUri"
+        android:ems="10"
+        android:id="@+id/editText4"
+        android:hint="Escribe los detalles" />
+
+    <Button
+        android:text="Agregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:elevation="4dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textAlignment="textEnd"
+        android:textStyle="normal|bold"
+        android:textSize="19sp"
+        android:textColor="@color/primary_dark" />
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:text="ENVIAR NOTIFICACIÓN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_weight="4"
+            android:textStyle="normal|bold"
+            android:textSize="30sp"
+            android:paddingTop="6dp"
+            android:textColor="@color/primary_dark"
+            android:paddingLeft="0dp" />
+
+        <ImageView
+            android:layout_width="106dp"
+            android:layout_height="74dp"
+            app:srcCompat="@drawable/bell"
+            android:id="@+id/imageView2"
+            android:layout_marginLeft="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:text="GRUPO:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            android:textStyle="normal|bold"
+            android:textSize="30sp" />
+
+        <TextView
+            android:text="2CM10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <TextView
+        android:text="PROGRAMACIÓN ORIENTADA A OBJETOS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textd"
+        android:textSize="20sp"
+        android:paddingBottom="15dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:background="@drawable/rounded_corners"
+        android:hint="¿Habrá clases?"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp" />
+
+    <Button
+        android:text="ENVIAR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:elevation="4dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textAlignment="textEnd"
+        android:textStyle="normal|bold"
+        android:textSize="19sp"
+        android:textColor="@color/primary_dark" />
+</LinearLayout>
+
