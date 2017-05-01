@@ -29,7 +29,6 @@ public class SplashScreen extends Activity {
         };
         timerThread.start();
 
-
     }
 
     @Override

@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Environment;
 import android.util.Log;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,11 +32,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         super(context, DB_NAME, null, 1);
         contexto = context;
 
-        if (Build.VERSION.SDK_INT >= 15)
-            DB_RUTA = "/data/data/" + contexto.getPackageName() + "/databases/";
+        if (Build.VERSION.SDK_INT >= 15) {
+            DB_RUTA = "/data/data/" + context.getPackageName() + "/databases/";
+            //DB_RUTA = contexto.getFilesDir().getAbsolutePath().replace("files", "databases") + File.separator + DB_NAME;
+        }
+
         else
           DB_RUTA = Environment.getDataDirectory() + "/data/" + contexto.getPackageName() + "/databases/";
-
 
     }
 
@@ -54,6 +57,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     public void abrir_base() {
         String ruta = DB_RUTA + DB_NAME;
+        Log.d("@Cristian", "Se está abriendo la base en: " + ruta);
         base_maestros = SQLiteDatabase.openDatabase(ruta, null, SQLiteDatabase.OPEN_READWRITE);
     }
 
@@ -69,12 +73,14 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         }
 
         else {
+
+            this.getReadableDatabase();
+
             try {
                 copiar_base();
             } catch (IOException e) {
                 e.printStackTrace();
                 Log.d("@Salomón", "Error al copiar la base");
-                this.getReadableDatabase();
             }
         }
 
@@ -90,7 +96,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         InputStream entrada = contexto.getAssets().open(DB_NAME);
         String salida_ruta = DB_RUTA + DB_NAME;
         OutputStream salida = new FileOutputStream(salida_ruta);
-        byte[] buffer = new byte[1024];
+        byte[] buffer = new byte[10]; //Cambie 10 por 1024
         int tamaño;
 
         while ((tamaño = entrada.read(buffer)) > 0) {
@@ -111,6 +117,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     //Verificar si la base existe
 
     public boolean verificar_base() {
+
         SQLiteDatabase checar_BD = null;
         String ruta = DB_RUTA + DB_NAME;
 
