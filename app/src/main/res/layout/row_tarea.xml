@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:adjustViewBounds="true"
+            android:elevation="7dp"
+            android:paddingRight="5dp"
+            app:srcCompat="@drawable/to2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="TERMINAR LA PRÁCTICA"
+                android:textAlignment="textEnd"
+                android:textColor="@color/primary_dark"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Falta cargar desde una lista o algun muñequillo chido aca todo loco y extraño"
+                android:textAlignment="textEnd" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

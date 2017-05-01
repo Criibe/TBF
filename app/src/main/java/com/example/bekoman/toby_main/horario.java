@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import static com.example.bekoman.toby_main.toby_main.dataBaseHelper;
@@ -28,7 +29,7 @@ public class horario extends Fragment {
     private TextView dia_horario;
     private ArrayList<item> lista_maestros = new ArrayList<item>();
     private Cursor cursor = null;
-    private adaptador adaptador;
+    private adaptador_horario adaptador;
     private String hora;
     private int focused;
 
@@ -61,10 +62,14 @@ public class horario extends Fragment {
         LinearLayoutManager lmanager = new LinearLayoutManager(getActivity());
         lista_maestros = cargar_base_horario(ControlFunctions.get_dia_texto(seekBar_horario.getProgress()));
 
-        adaptador = new adaptador(getActivity(), lista_maestros, getActivity());
+        adaptador = new adaptador_horario(getActivity(), lista_maestros, getActivity());
+
         adaptador.setOnTapListener(new OnTapListener() {
             @Override
             public void OnTapView(int position) {
+
+                Toast toast1 = Toast.makeText(getActivity().getApplicationContext(), "HEY", Toast.LENGTH_LONG);
+                toast1.show();
 
             }
         });
@@ -82,7 +87,7 @@ public class horario extends Fragment {
                 dia_horario.setText(ControlFunctions.get_dia_texto(progress));
                 lista_maestros.clear();
                 lista_maestros = cargar_base_horario(ControlFunctions.get_dia_texto(progress));
-                adaptador = new adaptador(getActivity(), lista_maestros, getActivity());
+                adaptador = new adaptador_horario(getActivity(), lista_maestros, getActivity());
                 LinearLayoutManager lmanager = new LinearLayoutManager(getActivity());
                 reciclador.setAdapter(adaptador);
             }

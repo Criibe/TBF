@@ -31,6 +31,7 @@
         </activity>
 
         <activity android:name=".mostrar_cardview" ></activity>
+        <activity android:name=".tareas" ></activity>
         <activity android:name=".datos_detallados" ></activity>
 
         <uses-library android:name="com.sec.android.app.multiwindow" android:required="false" />
